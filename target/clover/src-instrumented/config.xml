@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XmltoJava name="Selenium_Automation">
+  <!--  <suite suitename="ClusterCreation" classname="Singletier">
+	 <parameter testcase="createCluster" param="testauto" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="clusterValidation" param="testauto" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createCluster"/>
+   </suite>  -->
+    <suite suitename="SourceControl-github" classname="Singletier">
+	 <parameter name="SourceControl" testcase="Addsourcecontrol" param="sailakshmiv" param1="trov-it123" param2="github" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter name="SourceControl" testcase="Addsourcecontrolvalidation" param="sailakshmiv" param1="git" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="Addsourcecontrol"/>
+   </suite> 
+  <!--   <suite suitename="SourceControl-gitlab" classname="Singletier">
+	 <parameter name="SourceControl" testcase="Addsourcecontrol" param="vsailakshmi" param1="trov-it123" param2="gitlab" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter name="SourceControl" testcase="Addsourcecontrolvalidation" param="vsailakshmi" param1="gitlab" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="Addsourcecontrol"/>
+   </suite> 
+    <suite suitename="DeploymentActios-Git-ant-NativeBuilder-Singletier" classname="Singletier">
+	  <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/antapp.git" param2="sailakshmiv" param3="tomcat:7" param4="Ant" param5="ant" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slscd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slscd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/> 
+ 	 <parameter testcase="launchApp" param="slscd-design" param1="slscd-app" param2="30361" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slscd-app" param1="/AntExample/index.jsp" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>  
+     <parameter testcase="accessValidation" param="slscd-app" param1="/AntExample/index.jsp" param2="click Here-goPaddle Bluemeric ANTAPP DEMOnew" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="cdeliveryOn" param="slscd-app" param1="/AntExample/index.jsp" param2="click Here-goPaddle Bluemeric ANTAPP DEMO" param3="app" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/> 
+     <parameter testcase="cdeliveryOff" param="slscd-app" param1="/AntExample/index.jsp" param2="click Here-goPaddle Bluemeric ANTAPP DEMOapp" param3="new" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="cdeliveryOn"/>   
+  	 <parameter testcase="deleteApp" param="slscd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slscd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/> 
+     <parameter testcase="deleteDesign" param="slscd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+     <parameter testcase="deleteDesignValidation" param="slscd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>          
+   </suite>  
+  <suite suitename="Start-StopActions-Git-Python-NativeBuilder" classname="Singletier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/antapp.git" param2="" param3="tomcat:7" param4="Ant" param5="ant" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slst-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slst-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slst-design" param1="slst-app" param2="30362" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slst-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+     <parameter testcase="accessValidation" param="slst-app" param1="/AntExample/index.jsp" param2="click Here-goPaddle Bluemeric ANTAPP DEMOnew" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="stopAction" param="slst-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="startAction" param="slst-app" param1="/AntExample/index.jsp" param2="click Here-goPaddle Bluemeric ANTAPP DEMOnew" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="stopAction"/> 
+     <parameter testcase="deleteApp" param="slst-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slst-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>       
+	 <parameter testcase="deleteDesign" param="slst-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slst-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+</suite>
+  <suite suitename="Ant-Git-AntBuilder" classname="Singletier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/antapp.git" param2="" param3="tomcat:7" param4="Ant" param5="ant" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slant-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slant-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slant-design" param1="slant-app" param2="30363" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slant-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+     <parameter testcase="accessValidation" param="slant-app" param1="/AntExample/index.jsp" param2="click Here-goPaddle Bluemeric ANTAPP DEMOnew" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slant-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slant-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>       
+ 	 <parameter testcase="deleteDesign" param="slant-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slant-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+  <suite suitename="RubyOnRails-Git-NativeBuilder" classname="Singletier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/TicTacToe.git" param2="" param3="ruby with rbenv:2.3.0" param4="Native" param5="" param6="rails server -b 0.0.0.0" param7="" param8="" param9="apt-get install nodejs -y &#38;&#38; apt-get install -y bundler &#38;&#38; bundle install" param10="3000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/rubys.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slrails-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slrails-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slrails-design" param1="slrails-app" param2="30364" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slrails-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+     <parameter testcase="accessValidation" param="slrails-app" param1="" param2="Tic Tac Toe" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slrails-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slrails-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>       
+ 	 <parameter testcase="deleteDesign" param="slrails-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slrails-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+  <suite suitename="RubyOnSintra-Git-NativeBuilder" classname="Singletier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/sinatra-example.git" param2="" param3="ruby with rbenv:2.3.0" param4="Native" param5="" param6="ruby app.rb -o 0.0.0.0" param7="" param8="" param9="apt-get install -y bundler &#38;&#38; bundle install" param10="4567" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/rubys.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slrubys-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slrubys-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slrubys-design" param1="slrubys-app" param2="30365" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slrubys-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+     <parameter testcase="accessValidation" param="slrubys-app" param1="" param2="Hello World" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slrubys-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slrubys-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>       
+ 	 <parameter testcase="deleteDesign" param="slrubys-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slrubys-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+  <suite suitename="php-Git-NativeBuilder" classname="Singletier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/opsworks-demo-php-simple-app.git" param2="" param3="php:5.6" param4="Native" param5="" param6="" param7="" param8="" param9="" param10="80" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/php.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slphp-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slphp-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slphp-design" param1="slphp-app" param2="30366" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slphp-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+     <parameter testcase="accessValidation" param="slphp-app" param1="/opsworks-demo-php-simple-app/index.php" param2="Simple PHP App" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slphp-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slphp-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>       
+ 	 <parameter testcase="deleteDesign" param="slphp-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slphp-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+ <suite suitename="Maven-Git-MavenBuilder" classname="Singletier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/MavenWeb.git" param2="" param3="tomcat:7" param4="Maven" param5="mvn package" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmvn-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slmvn-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+     <parameter testcase="launchApp" param="slmvn-design" param1="slmvn-app" param2="30367" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmvn-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmvn-app" param1="/MavenWeb-0.0.1-SNAPSHOT/" param2="Hello World from Servlet" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/> 
+     <parameter testcase="deleteApp" param="slmvn-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmvn-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>        
+     <parameter testcase="deleteDesign" param="slmvn-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmvn-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+   </suite>
+    <suite suitename="JavaGradle-Git-GradleBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/javanew.git" param2="" param3="java:1.8" param4="Gradle" param5="gradle build" param6="java -jar tic-tac-toe-0.1.0.jar" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/jgradle.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slgd-design" param1="slgd-app" param2="30368" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slgd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slgd-app" param1="/tictactoe/" param2="Tic Tac Toe&#xA;Your turn. Think very carefully and click a square when ready.&#xA;Play First&#xA;New Game" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slgd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slgd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+ <suite suitename="JavaMaven-Git-MavenBuilder" classname="Singletier">
+ 	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/springboot.git" param2="" param3="java:1.7" param4="Maven" param5="mvn package" param6="java -jar springboot-jersey-1.0-SNAPSHOT.jar" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/jgradle.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sljmvn-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sljmvn-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sljmvn-design" param1="sljmvn-app" param2="30369" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sljmvn-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sljmvn-app" param1="/rest/hello" param2="Hello World" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sljmvn-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sljmvn-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="sljmvn-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sljmvn-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+ <suite suitename="akka-Git-Gradle" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/springboot-akka.git" param2="" param3="java:1.8" param4="Gradle" param5="gradle build" param6="gradle bootRun" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/Jmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slaka-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slaka-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slaka-design" param1="slaka-app" param2="30370" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slaka-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slaka-app" param1="" param2="Hello World!" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slaka-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slaka-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slaka-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slaka-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="Nodejs-Git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/hellojs.git" param2="" param3="nodejs:v0.10.25" param4="Native" param5="" param6="nodejs app.js" param7="" param8="" param9="" param10="8083" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnode-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slnode-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnode-design" param1="slnode-app" param2="30371" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnode-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnode-app" param1="" param2="Hello World&#xA;This is Sample nOdeJs application" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slnode-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnode-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slnode-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnode-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+  <suite suitename="Gosample-Git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/hoisie/web.git" param2="" param3="go:1.6" param4="Native" param5="cd examples go get ./...; go build hello.go" param6="./examples/hello" param7="" param8="" param9="" param10="9999" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/Go.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slgos-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slgos-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slgos-design" param1="slgos-app" param2="30372" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slgos-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slgos-app" param1="" param2="hello" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slgos-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slgos-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slgos-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slgos-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="phpsample-Git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/nette/application.git" param2="" param3="php:5.6" param4="Native" param5="" param6="" param7="" param8="" param9="" param10="80" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/php.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slphps-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slphps-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slphps-design" param1="slphps-app" param2="30373" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slphps-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slphps-app" param1="/application" param2="src" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slphps-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slphps-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slphps-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slphps-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+ <suite suitename="Go-Git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/go-test.git" param2="" param3="go:1.6" param4="Native" param5="go get ./...; go build main.go" param6="./main" param7="" param8="" param9="" param10="8700" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/Go.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slgo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slgo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slgo-design" param1="slgo-app" param2="30374" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slgo-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slgo-app" param1="/api/status" param2="Running" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slgo-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slgo-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slgo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slgo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="Go-Gitlab-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="gitlab" param1="https://gitlab.com/vsailakshmi/go-test.git" param2="vsailakshmi" param3="go:1.6" param4="Native" param5="go get ./...; go build main.go" param6="./main" param7="" param8="" param9="" param10="8700" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/gitlab.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slgo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slgo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slgo-design" param1="slgo-app" param2="30474" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slgo-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slgo-app" param1="/api/status" param2="Running" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slgo-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slgo-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slgo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slgo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+    <suite suitename="Goweb-Git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/simple-go-web-app.git" param2="" param3="go:1.6" param4="Native" param5="go get ./...; go build main.go" param6="./main" param7="" param8="" param9="" param10="3000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/Go.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slgoweb-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slgoweb-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slgoweb-design" param1="slgoweb-app" param2="30375" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slgoweb-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slgoweb-app" param1="" param2="Hello world" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slgoweb-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slgoweb-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slgoweb-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slgoweb-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+  <suite suitename="Python-Git-NativeBuilder" classname="Singletier">
+	<parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/hellopy.git" param2="sailakshmiv" param3="python:2.7" param4="Native" param5="" param6="python application.py" param7="" param8="pip install flask" param9="" param10="5000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/python.png"  param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slpython-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slpython-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slpython-design" param1="slpython-app" param2="30376" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slpython-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slpython-app" param1="" param2="Hello, World! This is sample Python Web Application" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slpython-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slpython-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>       
+     <parameter testcase="deleteDesign" param="slpython-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slpython-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+    </suite>  
+     <suite suitename="Python2-Git-NativeBuilder" classname="Singletier">
+	<parameter testcase="createSingletierDesign" param="git" param1="https://github.com/GleasonK/Polymer-Todo.git" param2="" param3="python:2.7" param4="Native" param5="" param6="python -m SimpleHTTPServer 8001" param7="" param8="" param9="" param10="8001" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/python.png"  param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slpython-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slpython-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slpython-design" param1="slpython-app" param2="30376" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slpython-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slpython-app" param1="" param2="Completed Tasks" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slpython-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slpython-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>       
+     <parameter testcase="deleteDesign" param="slpython-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slpython-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+    </suite>  
+  <suite suitename="PythonFlask-Git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/PythonFlask.git" param2="" param3="python:2.7" param4="Native" param5="" param6="python app/routes.py" param7="" param8="pip install flask" param9="" param10="5000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/python.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slpyfl-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slpyfl-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slpyfl-design" param1="slpyfl-app" param2="30377" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slpyfl-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slpyfl-app" param1="" param2="FLASK APP&#xA;Home&#xA;Welcome to the Flask app&#xA;This is the home page for the Flask app" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slpyfl-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slpyfl-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slpyfl-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slpyfl-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+  <suite suitename="JavaMaven-bit-GradleBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="bit" param1="https://bitbucket.org/MalathiA/javaapp1.git" param2="" param3="java:1.7" param4="Maven" param5="mvn package" param6="java -jar example-spring-boot-mvc-1.0-SNAPSHOT.war" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/jbit.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slbgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slbgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slbgd-design" param1="slbgd-app" param2="30378" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slbgd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slbgd-app" param1="/user_list.html" param2="List of users" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slbgd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slbgd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slbgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slbgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="JavaGradle-bit-GradleBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="bit" param1="https://bitbucket.org/MalathiA/javanew1.git" param2="" param3="java:1.8" param4="Gradle" param5="gradle build" param6="java -jar tic-tac-toe-0.1.0.jar" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/jbit.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slbgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slbgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slbgd-design" param1="slbgd-app" param2="30379" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slbgd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slbgd-app" param1="/tictactoe/" param2="Tic Tac Toe&#xA;Your turn. Think very carefully and click a square when ready.&#xA;Play First&#xA;New Game" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slbgd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slbgd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slbgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slbgd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="Node-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/node-vs-java-tests.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="nodejs app.js" param7="" param8="npm install express" param9="" param10="8081" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnj1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slnj1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnj1-design" param1="slnj1-app" param2="30380" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnj1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnj1-app" param1="/hello" param2="hello world" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slnj1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnj1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slnj1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnj1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+    <suite suitename="Node1-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/nodejs-express-start.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln1-design" param1="sln1-app" param2="30381" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln1-app" param1="" param2="Express with Underscore!" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+   <suite suitename="Node2-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/nodejs-cluster-express.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="cp config/config.sample.js config/config.js &#38;&#38;  node server.js" param7="" param8="" param9="npm install" param10="3002" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln2-design" param1="sln2-app" param2="30382" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln2-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln2-app" param1="" param2="Hello from worker" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln2-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln2-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="Node3-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/nodejs-xml2jsonp.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install -g xml2js &#38;&#38;  npm install -g journey &#38;&#38;  npm install journey &#38;&#38;   npm install xml2js" param10="80" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln3-design" param1="sln3-app" param2="30383" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln3-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln3-app" param1="" param2="Please use" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln3-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln3-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+     <suite suitename="Node4-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/tsa-webapp.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install" param10="3001" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln4-design" param1="sln4-app" param2="30384" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln4-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln4-app" param1="" param2="Tweetlerin" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln4-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln4-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+    <suite suitename="Node5-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/nodejs_quickstart.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm update" param10="1289" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln5-design" param1="sln5-app" param2="30385" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln5-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln5-app" param1="" param2="Hello World" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln5-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln5-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+   <suite suitename="Node6-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/NodeGoat.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install" param10="4000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln6-design" param1="sln6-app" param2="30386" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln6-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln6-app" param1="" param2="OWASP Node Goat Project" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln6-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln6-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="Node7-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/DanialK/ReactJS-Realtime-Chat.git" param2="" param3="nodejs:v0.10.25" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm install &#38;&#38; npm run build" param10="3000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln7-design" param1="sln7-app" param2="30423" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln7-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln7-app" param1="" param2="Conversation" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln7-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln7-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="Node8-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/mallikarjunveepuru/studybuddytwo.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node app.js" param7="" param8="" param9="npm install" param10="8000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln8-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln8-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln8-design" param1="sln8-app" param2="30387" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln8-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln8-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln8-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln8-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln8-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln8-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="Node9-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/order-management.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm install" param10="80" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln9-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln9-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln9-design" param1="sln9-app" param2="30388" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln9-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln9-app" param1="" param2="All orders" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln9-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln9-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln9-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln9-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+   <suite suitename="Node10-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/mallikarjunveepuru/acadgild-nodejs_webinar.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln10-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln10-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln10-design" param1="sln10-app" param2="30389" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln10-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln10-app" param1="" param2="What is your nickname?" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln10-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln10-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln10-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln10-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+  <suite suitename="Node11-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/DanialK/ReactJS-Realtime-Chat.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln11-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln11-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln11-design" param1="sln11-app" param2="30390" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln11-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln11-app" param1="" param2="Online Users" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln11-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln11-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln11-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln11-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="Node12-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/anuanushiya/chat.git" param2="" param3="nodejs:v0.10.25" param4="Native" param5="" param6="node bin/www" param7="" param8="" param9="npm install &#38;&#38; npm install -g bower&#38;&#38;  bower install &#45;&#45;allow-root" param10="3000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="sln12-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="sln12-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="sln12-design" param1="sln12-app" param2="30390" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="sln12-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="sln12-app" param1="" param2="Chat Application" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="sln12-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="sln12-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="sln12-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="sln12-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+ <suite suitename="Maven1-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/java-web-application.git" param2="" param3="tomcat:7" param4="Maven" param5="mvn package" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmvn1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slmvn1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmvn1-design" param1="slmvn1-app" param2="30391" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmvn1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmvn1-app" param1="/Java-Web-Application-1.0/" param2="Hello, world!" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slmvn1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmvn1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slmvn1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmvn1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+   <suite suitename="Maven2-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/java-webapplication.git" param2="" param3="tomcat:7" param4="Maven" param5="mvn package" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmvn2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slmvn2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmvn2-design" param1="slmvn2-app" param2="30392" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmvn2-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmvn2-app" param1="/java-webapplication/" param2="Spring" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slmvn2-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmvn2-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slmvn2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmvn2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="Maven3-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/maven-java-web-application.git" param2="" param3="tomcat:7" param4="Maven" param5="cd sampleWebApp/ ; mvn package" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmvn3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slmvn3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmvn3-design" param1="slmvn3-app" param2="30393" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmvn3-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmvn3-app" param1="/mywebapp/" param2="Welcome to Id Generator" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slmvn3-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmvn3-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slmvn3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmvn3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+   <suite suitename="Maven4-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/basicMavenWeb.git" param2="" param3="tomcat:7" param4="Maven" param5="mvn package" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmvn4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slmvn4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmvn4-design" param1="slmvn4-app" param2="30394" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmvn4-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmvn4-app" param1="/simple-webapp/" param2="Hello World!" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slmvn4-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmvn4-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slmvn4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmvn4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+   <suite suitename="Maven5-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/cxf-demo.git" param2="" param3="tomcat:7" param4="Maven" param5="mvn package" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmvn5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slmvn5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmvn5-design" param1="slmvn5-app" param2="30395" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmvn5-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmvn5-app" param1="/webservices-1.0-SNAPSHOT/" param2="Available SOAP services:" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slmvn5-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmvn5-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slmvn5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmvn5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+   <suite suitename="Maven6-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/webapptest.git" param2="" param3="tomcat:7" param4="Maven" param5="mvn package" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmvn6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slmvn6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmvn6-design" param1="slmvn6-app" param2="30396" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmvn6-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmvn6-app" param1="/webapptest/" param2="Hello Dockerites" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slmvn6-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmvn6-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slmvn6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmvn6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="Maven7-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/maven-hello-world.git" param2="" param3="tomcat:7" param4="Maven" param5="mvn package" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmvn7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slmvn7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmvn7-design" param1="slmvn7-app" param2="30397" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmvn7-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmvn7-app" param1="/CounterWebApp/" param2="Spring" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slmvn7-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmvn7-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slmvn7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmvn7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+   <suite suitename="Python1-git-NativeBuilder" classname="Singletier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/hello-python.git" param2="" param3="python:2.7" param4="Native" param5="" param6="python hello.py" param7="" param8="pip install flask" param9="" param10="5000" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/python.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slpy1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
+  	 <parameter testcase="designValidation" param="slpy1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slpy1-design" param1="slpy1-app" param2="30398" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slpy1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slpy1-app" param1="" param2="Hello World!" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slpy1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slpy1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slpy1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slpy1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+   <suite suitename="DeploymentActios-Git-JavaMySQL-NativeBuilder-Multitier" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/spring.git" param2="sailakshmiv" param3="tomcat:7" param4="Maven" param5="mvn package" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mysql" param1="5.6" param2="https://storage.googleapis.com/paddle-testautomcation-donotdelete/dbdata.tgz" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/git.png" param1="sikuliimg/mysql.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmcd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slmcd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmcd-design" param1="slmcd-app" param2="30399" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>  
+	 <parameter testcase="launchValidation" param="slmcd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="accessValidation" param="slmcd-app" param1="/spring-example/" param2="Hello world!!!!!!&#xA;Welcome to Home page of Spring example app..&#xA;&#xA;&#xA;&#58;&#41;Click here to view the Product listnew" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="cdeliveryOn" param="slmcd-app" param1="/spring-example/" param2="Hello world!!!!!!&#xA;Welcome to Home page of Spring example app..&#xA;&#xA;&#xA;&#58;&#41;Click here to view the Product list" param3="app" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/> 
+     <parameter testcase="cdeliveryOff" param="slmcd-app" param1="/spring-example/" param2="Hello world!!!!!!&#xA;Welcome to Home page of Spring example app..&#xA;&#xA;&#xA;&#58;&#41;Click here to view the Product listapp" param3="new" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="cdeliveryOn"/>    
+	 <parameter testcase="deleteApp" param="slmcd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmcd-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+	 <parameter testcase="deleteDesign" param="slmcd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmcd-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+  <suite suitename="JavaMySQL-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/spring.git" param2="" param3="tomcat:7" param4="Maven" param5="mvn package" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mysql" param1="5.6" param2="https://storage.googleapis.com/paddle-testautomcation-donotdelete/dbdata.tgz" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/git.png" param1="sikuliimg/mysql.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmysql-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slmysql-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmysql-design" param1="slmysql-app" param2="30400" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmysql-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmysql-app" param1="/spring-example/" param2="Hello world!!!!!!&#xA;Welcome to Home page of Spring example app..&#xA;&#xA;&#xA;&#58;&#41;Click here to view the Product listnew" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slmysql-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmysql-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slmysql-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmysql-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>   
+  <suite suitename="JavaMySQL1-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/test-webapp.git" param2="" param3="tomcat:7" param4="Ant" param5="ant" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mysql" param1="5.6" param2="https://storage.googleapis.com/paddle-testautomcation-donotdelete/practicedb.tgz" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/git.png" param1="sikuliimg/mysql.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmysql1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slmysql1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmysql1-design" param1="slmysql1-app" param2="30401" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmysql1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmysql1-app" param1="/TestWebApp" param2="Employees Information" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slmysql1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmysql1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slmysql1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmysql1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+   <suite suitename="NodeMySQL-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/Quiz-Application.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm install" param10="8000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mysql" param1="5.6" param2="https://storage.googleapis.com/paddle-testautomcation-donotdelete/quizappdb.tgz" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mysql.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnmsql-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnmsql-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnmsql-design" param1="slnmsql-app" param2="30402" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnmsql-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnmsql-app" param1="" param2="Username" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnmsql-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnmsql-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnmsql-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnmsql-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+ <suite suitename="NodeRedis-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/hellyeah.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node app.js" param7="" param8="" param9="npm install" param10="8000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="Redis" param1="fastprakash/redis:v3" param2="6379" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/redis.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnredis-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnredis-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnredis-design" param1="slnredis-app" param2="30403" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnredis-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnredis-app" param1="" param2="hellyeah" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnredis-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnredis-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnredis-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnredis-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+       <suite suitename="NodeMongo1-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/zellviewjs.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="cp config/config.example.js config/config.js &#38;&#38; node server.js" param7="" param8="" param9="" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm1-design" param1="slnm1-app" param2="30404" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm1-app" param1="" param2="Articles" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm1-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm1-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+    <suite suitename="NodeMongo2-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/CheerioMongo-scraper.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm2-design" param1="slnm2-app" param2="30405" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm2-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm2-app" param1="" param2="Comics" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm2-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm2-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm2-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+  <suite suitename="NodeMongo3-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/booktrade-21clouds.git" param2="" param3="nodejs:v0.10.25" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm3-design" param1="slnm3-app" param2="30406" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm3-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm3-app" param1="" param2="Form Login" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm3-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm3-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm3-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+   <suite suitename="NodeMongo4-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/mallikarjunveepuru/NodeJS_RestAPI.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm4-design" param1="slnm4-app" param2="30407" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm4-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm4-app" param1="" param2="Express" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm4-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm4-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm4-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+  <suite suitename="NodeMongo5-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/mallikarjunveepuru/blocitoff.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm install -g grunt-cli ; npm install ; apt-get install git &#45;y ; npm install &#45;g bower ; bower install &#45;&#45;allow&#45;root" param10="1337" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm5-design" param1="slnm5-app" param2="30408" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm5-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm5-app" param1="" param2="Copyright" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm5-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm5-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm5-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="NodeMongo6-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/mallikarjunveepuru/Resful-Calendar-Web-App.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm6-design" param1="slnm6-app" param2="30409" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm6-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm6-app" param1="" param2="Welcome" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm6-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm6-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm6-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+   <suite suitename="NodeMongo7-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/mallikarjunveepuru/real-time-chat.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install" param10="9100" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm7-design" param1="slnm7-app" param2="30410" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm7-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm7-app" param1="" param2="Join Chat" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm7-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm7-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm7-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+  <suite suitename="NodeMongo8-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/mongodb-realtime-pubsub.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node app" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="https://storage.googleapis.com/paddle-testautomcation-donotdelete/chat.tgz" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm8-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm8-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm8-design" param1="slnm8-app" param2="30411" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm8-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm8-app" param1="" param2="MongoDB" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm8-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm8-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm8-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm8-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+  <suite suitename="NodeMongo9-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/nodejs-prelaunchr.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node app.js" param7="" param8="" param9="npm install" param10="1337" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm9-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm9-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm9-design" param1="slnm9-app" param2="30412" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm9-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm9-app" param1="" param2="IT IS ALMOST HERE" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm9-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm9-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm9-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm9-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+   <suite suitename="NodeMongo10-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/webdev.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm10-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm10-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm10-design" param1="slnm10-app" param2="30413" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm10-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm10-app" param1="" param2="Hi!" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm10-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm10-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm10-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm10-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+  <suite suitename="NodeMongo11-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/nodejs-emberjs-mongodb.git" param2="" param3="nodejs:v0.10.25" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm11-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm11-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm11-design" param1="slnm11-app" param2="30414" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm11-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm11-app" param1="" param2="nodejs-ember" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm11-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm11-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm11-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm11-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+  <suite suitename="NodeMongo12-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/ContactListApp.git" param2="" param3="nodejs:v0.10.25" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm12-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm12-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm12-design" param1="slnm12-app" param2="30415" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm12-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm12-app" param1="" param2="Contact List APP" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm12-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm12-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm12-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm12-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+  <suite suitename="NodeMongo13-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/my-nodejs-web-site-template.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install ; apt-get install git &#45;y ; npm install bower &#45;g ; bower install &#45;&#45;allow&#45;root" param10="80" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm13-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm13-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm13-design" param1="slnm13-app" param2="30416" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm13-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm13-app" param1="" param2="MultiVision" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm13-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm13-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm13-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm13-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite> 
+   <suite suitename="NodeMongo14-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/nodejs-lovelies.git" param2="" param3="nodejs:v5.0" param4="Native" param5="" param6="node server.js" param7="" param8="" param9="npm install" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm14-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm14-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm14-design" param1="slnm14-app" param2="30417" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm14-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm14-app" param1="" param2="I Can't" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm14-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm14-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm14-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm14-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+ <suite suitename="NodeMongo15-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/anuanushiya/AngularMongo.git" param2="" param3="nodejs:v0.10.25" param4="Native" param5="" param6="node app.js" param7="" param8="" param9="npm install &#38;&#38; apt-get install git -y &#38;&#38; npm install bower -g &#38;&#38; bower install &#45;&#45;allow-root" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/node.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/node.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnm15-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnm15-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnm15-design" param1="slnm15-app" param2="30817" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnm15-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnm15-app" param1="" param2="AngularJS" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slnm15-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnm15-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slnm15-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnm15-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+ 
+  <suite suitename="JavaCassandra-Git-MavenBuilder" classname="Multitier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/playlist.git" param2="" param3="tomcat:7" param4="Maven" param5="mvn verify" param6="" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="cass" param1="2.3" param2="https://storage.googleapis.com/paddle-testautomcation-donotdelete/data.tgz" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/git.png" param1="sikuliimg/cass.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slcass-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slcass-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slcass-design" param1="slcass-app" param2="30418" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slcass-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slcass-app" param1="/playlist-1.0-SNAPSHOT/" param2="Playlist&#xA;Welcome to the playlist application.&#xA;Java version: 1.8.0_91&#xA;Cassandra version: 2.2.6&#xA;Cluster name: Test Cluster&#xA;Places to Go:&#xA;MY PLAYLISTS VISIT THE SONG DATABASE STATISTICS" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slcass-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slcass-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slcass-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slcass-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+   <suite suitename="JavaMongoDB-Git-MavenBuilder" classname="Multitier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/todoapp-spark.git" param2="" param3="java:1.8" param4="Maven" param5="mvn clean package" param6="java -jar todoapp1-1.0-SNAPSHOT.jar" param7="" param8="" param9="" param10="8080" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/Jmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/Jmongo.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slmongo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slmongo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slmongo-design" param1="slmongo-app" param2="30419" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slmongo-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slmongo-app" param1="" param2="TodoApp" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slmongo-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slmongo-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slmongo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slmongo-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+  <suite suitename="NodeJsMongoDB-Git-NativeBuilder" classname="Multitier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/tvshow-tracker.git" param2="" param3="nodejs:v0.10.25" param4="Native" param5="" param6="npm start" param7="" param8="" param9="npm install &#45;&#45;save" param10="3000" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="" />
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/nmongo.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slndmng-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slndmng-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slndmng-design" param1="slndmng-app" param2="30420" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slndmng-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slndmng-app" param1="" param2="ShowTrackr"  param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slndmng-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slndmng-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+     <parameter testcase="deleteDesign" param="slndmng-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slndmng-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="ReactJsMongoDB-Git-NativeBuilder" classname="Multitier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/reactjs-nodejs-mongodb.git" param2="" param3="nodejs:v0.10.25" param4="Native" param5="" param6="cd server;node server.js" param7="apt-get install -y git" param8="" param9="npm install -g bower &#45;&#45;allow-root &#38;&#38; npm install &#45;&#45;global gulp-cli &#38;&#38; npm install &#38;&#38; bower install &#45;&#45;allow-root &#38;&#38; gulp" param10="7777" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/nmongo.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slreact-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slreact-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slreact-design" param1="slreact-app" param2="30421" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slreact-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slreact-app" param1="" param2="Gowri's react-nodejs-mdb example" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slreact-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slreact-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+ 	 <parameter testcase="deleteDesign" param="slreact-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slreact-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>  
+  <suite suitename="nodeJsMongo-Git-NativeBuilder" classname="Multitier">
+     <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/facility-webapp.git" param2="" param3="nodejs:v0.10.25" param4="Native" param5="" param6="node app.js" param7="" param8="" param9="npm install" param10="8082" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mongo" param1="3.2" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/nmongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/nmongo.png" param1="sikuliimg/mongo.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slnmon-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slnmon-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slnmon-design" param1="slnmon-app" param2="30422" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slnmon-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slnmon-app" param1="" param2="Hello World" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
+     <parameter testcase="deleteApp" param="slnmon-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slnmon-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>      
+ 	 <parameter testcase="deleteDesign" param="slnmon-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slnmon-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>    
+  <suite suitename="phpMySQL-Git-MavenBuilder" classname="Multitier">
+	 <parameter testcase="createSingletierDesign" param="git" param1="https://github.com/sailakshmiv/php-test.git" param2="" param3="php:5.6" param4="Native" param5="" param6="" param7="" param8="" param9="" param10="80" dependson=""/>
+	 <parameter testcase="createMultitierDesign" param="mysql" param1="5.5" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/php.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+	 <parameter testcase="multilinkComponent" param="sikuliimg/php.png" param1="sikuliimg/mysql.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
+  	 <parameter testcase="publish" param="slphp-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="multilinkComponent"/>
+  	 <parameter testcase="designValidation" param="slphp-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
+	 <parameter testcase="launchApp" param="slphp-design" param1="slphp-app" param2="30377" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchValidation" param="slphp-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
+	 <parameter testcase="accessValidation" param="slphp-app" param1="" param2="Apache2 Ubuntu Default Page" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation" />
+     <parameter testcase="deleteApp" param="slphp-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
+     <parameter testcase="deleteValidation" param="slphp-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteApp"/>     
+     <parameter testcase="deleteDesign" param="slphp-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+     <parameter testcase="deleteDesignValidation" param="slphp-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="deleteDesign"/>           
+  </suite>
+  <suite suitename="SourceControlGitlabDeletion" classname="Singletier">
+	 <parameter name="SourceControlDeletion" testcase="sourceControlDeletion" param="vsailakshmi" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter name="SourceControlDeletion" testcase="sourceControlDeletionValidation" param="vsailakshmi" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="sourceControlDeletion"/>
+   </suite>
+  <suite suitename="SourceControlDeletion" classname="Singletier">
+	 <parameter name="SourceControlDeletion" testcase="sourceControlDeletion" param="sailakshmiv" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter name="SourceControlDeletion" testcase="sourceControlDeletionValidation" param="sailakshmiv" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="sourceControlDeletion"/>
+   </suite>
+   <suite suitename="ClusterDeletion" classname="Singletier">
+	   <parameter testcase="clusterDeletion" param="testauto" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>  
+      <parameter testcase="clusterDeletionvalidation" param="testauto" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="clusterDeletion"/> 
+  </suite>   --> 
+ </XmltoJava>
+
+
+
+
+
