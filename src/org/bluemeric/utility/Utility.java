@@ -458,12 +458,14 @@ public class Utility implements ITestListener {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(prop.getProperty("signin")))).click();
 			Thread.sleep(20000);
 		boolean b1 = driver.findElement(By.xpath(prop.getProperty("googletable"))).isDisplayed();
-		if(!b1){
+		System.out.println(b1);
+		if(b1){
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("directcluster")))).click();
 		}
 		else{
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("googletablechild")))).click();
 		}
+		System.out.println("hello................");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("dcname")))).clear();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("dcname")))).sendKeys(kubname);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("dczone")))).click();
@@ -480,7 +482,7 @@ public class Utility implements ITestListener {
 			driver.navigate().refresh();
 			Thread.sleep(20000);
 			boolean b = driver.findElement(By.xpath(prop.getProperty("googletable"))).isDisplayed();
-			if (!b) {
+			if (b) {
 
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("table")));
 				WebElement table1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("table")));
@@ -2142,7 +2144,7 @@ public class Utility implements ITestListener {
 			WebDriverWait wait = new WebDriverWait(driver, 1000);
 			Thread.sleep(20000);
 			boolean b = driver.findElement((By.xpath(prop.getProperty("googletable")))).isDisplayed();
-			if(!b){
+			if(b){
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("table")));
 			WebElement table = wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("table")));
 			WebElement tbody = table.findElement(By.tagName("tbody"));
@@ -2188,7 +2190,7 @@ public class Utility implements ITestListener {
 				driver.navigate().refresh();
 				Thread.sleep(20000);
 				boolean b = driver.findElement(By.xpath(prop.getProperty("googletable"))).isDisplayed();
-				if (!b) {
+				if (b) {
 
 					wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("table")));
 					WebElement table1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("table")));
