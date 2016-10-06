@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <XmltoJava name="Selenium_Automation">
     <suite suitename="ClusterCreation" classname="Singletier">
-	 <parameter testcase="createCluster" param="testauto" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
-	 <parameter testcase="clusterValidation" param="testauto" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createCluster"/>
+	 <parameter testcase="createCluster" param="test-qa" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="clusterValidation" param="test-qa" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createCluster"/>
    </suite>  
    <!--  <suite suitename="SourceControl-github" classname="Singletier">
 	 <parameter name="SourceControl" testcase="Addsourcecontrol" param="sailakshmiv" param1="trov-it123" param2="github" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
