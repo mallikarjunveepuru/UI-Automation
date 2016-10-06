@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <XmltoJava name="Selenium_Automation">
     <suite suitename="ClusterCreation" classname="Singletier">
-	 <parameter testcase="createCluster" param="test-qa" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
-	 <parameter testcase="clusterValidation" param="test-qa" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createCluster"/>
+	 <parameter testcase="createCluster" param="testqa" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
+	 <parameter testcase="clusterValidation" param="testqa" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createCluster"/>
    </suite>  
    <!--  <suite suitename="SourceControl-github" classname="Singletier">
 	 <parameter name="SourceControl" testcase="Addsourcecontrol" param="sailakshmiv" param1="trov-it123" param2="github" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/>
@@ -47,7 +47,7 @@
 	 <parameter testcase="linkComponent" param="sikuliimg/www.png" param1="sikuliimg/git.png" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="createSingletierDesign"/>
   	 <parameter testcase="publish" param="maant-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="linkComponent"/>
   	 <parameter testcase="designValidation" param="maant-design" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="publish"/>
-	 <parameter testcase="launchApp" param="maant-design" param1="maant-app" param2="30363" param3="testauto" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
+	 <parameter testcase="launchApp" param="maant-design" param1="maant-app" param2="30363" param3="testqa" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson=""/> 
 	 <parameter testcase="launchValidation" param="maant-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/> 
      <parameter testcase="accessValidation" param="maant-app" param1="/AntExample/index.jsp" param2="click Here-goPaddle Bluemeric ANTAPP DEMOnew" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchValidation"/>
      <parameter testcase="deleteApp" param="maant-app" param1="" param2="" param3="" param4="" param5="" param6="" param7="" param8="" param9="" param10="" dependson="launchApp"/>
