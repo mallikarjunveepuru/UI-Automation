@@ -38,7 +38,7 @@ public class Directlogin {
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("gopddlesignup")))).click();
 	Thread.sleep(20000);
 	driver.findElement(By.xpath(prop.getProperty("directlogin"))).click();
-	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("directemail")))).sendKeys("sailakshmi.v@trov.co.in");
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("directemail")))).sendKeys("veepuruslakshmi@trov.co.in");
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("directpassword")))).sendKeys("trov-it123");
 	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("directsignin")))).click();
 	Thread.sleep(10000);
