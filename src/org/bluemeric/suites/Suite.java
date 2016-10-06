@@ -170,7 +170,7 @@ public class Suite implements ITestListener {
 			if (cloud.equals("Google")) {
 				System.out.println("Google");
 				report = new ExtentReports(projectHome+"/test-output/"+cloud+"kub"+"/ExtendedReports"+timeStamp+".html");
-				report.loadConfig(new File("C:\\extentreports-java-v2.41.0\\extent-config.xml"));
+				report.loadConfig(new File("extent-config.xml"));
 				rtest = new Suite();
 				google.login(cloud);
 				tng.setOutputDirectory("test-output/"+cloud+"kub"+"/");
@@ -188,7 +188,7 @@ public class Suite implements ITestListener {
 				azure.login(cloud);
 				}
 				report = new ExtentReports(projectHome+"/test-output/"+cloud+s[j]+"/ExtendedReports"+timeStamp+".html");
-				report.loadConfig(new File("C:\\extentreports-java-v2.41.0\\extent-config.xml"));
+				report.loadConfig(new File("extent-config.xml"));
 				System.out.println("hi");
 				rtest = new Suite();
 				tng.setOutputDirectory("test-output/"+cloud+s[j]+"/");
@@ -201,7 +201,7 @@ public class Suite implements ITestListener {
 			}
 			else if(cloud.equals("Direct")){
 				report = new ExtentReports(projectHome+"/test-output/"+cloud+"kub"+"/ExtendedReports"+timeStamp+".html");
-				report.loadConfig(new File("C:\\extentreports-java-v2.41.0\\extent-config.xml"));
+				report.loadConfig(new File("extent-config.xml"));
 				System.out.println("Direct");
 				rtest = new Suite();
 				dc.login(cloud);
