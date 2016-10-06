@@ -19,6 +19,7 @@ import org.bluemeric.utility.Utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestContext;
@@ -54,7 +55,7 @@ public class Suite implements ITestListener {
 
 	public WebDriver newDriver() {
 		if (driver == null) {
-			return new ChromeDriver();
+			return new FirefoxDriver();
 		}
 		return driver;
 	}
@@ -144,9 +145,9 @@ public class Suite implements ITestListener {
 	}
 
 	public static void main(String[] args) throws JAXBException, Exception {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("chrome.switches","--disable-extensions");
-		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
+		//ChromeOptions options = new ChromeOptions();
+		//options.addArguments("chrome.switches","--disable-extensions");
+		//System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 		System.setProperty("file.log", "./log/log.log");
 		PropertyConfigurator.configure("./log4j.properties");
 		Suite rtest = new Suite();
@@ -154,14 +155,14 @@ public class Suite implements ITestListener {
 		Properties prop = new Properties();
 		FileInputStream fs = new FileInputStream(workspace + "/properties.properties");
 		prop.load(fs);
-		for (int i = 0; i < args.length; i++) {
-			String cloud = args[i];
+		//for (int i = 0; i < args.length; i++) {
+			String cloud = "Direct";//args[i];
 			/*DesiredCapabilities caps = DesiredCapabilities.chrome();
 			  caps.setCapability("platform", "Windows 7");
 			  caps.setCapability("version", "51.0");
 			  driver = new RemoteWebDriver(new java.net.URL(URL) , caps);*/
-			driver=new ChromeDriver(options);
-			  
+			//driver=new ChromeDriver(options);
+			  driver=new FirefoxDriver();
 			  Google google = new Google();
 			Azure azure = new Azure();
 			Directlogin dc=new Directlogin();
@@ -210,7 +211,7 @@ public class Suite implements ITestListener {
 				logout();
 			}
 			}
-		}	
+		//}	
 	
 
 	@Override
